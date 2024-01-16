@@ -23,11 +23,16 @@ def get_voltages():
     print(volt)
 get_voltages()
 
-input ('please push enter')
+number = input("please push same number :")
 
 try:
     print('--- start program ---')
     while True:
-        volts = get_voltage() - 24.21
+        volts = get_voltage() - float(number)
         print('volts= {:3.2f}'.format(volts))
         sleep(0.01)
+except KeyboardInterrupt:
+    pass
+finally:
+    spi.close()
+    print('--- stop program ---')
