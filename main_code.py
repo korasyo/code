@@ -29,7 +29,7 @@ try:
     print('--- start program ---')
     while True:
         volts = get_voltage() - float(number)
-        print('volts= {:3.2f}'.format(volts))
+        print('{:3.2f}'.format(volts))
         sleep(0.01)
 except KeyboardInterrupt:
         pass
